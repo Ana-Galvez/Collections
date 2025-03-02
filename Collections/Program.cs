@@ -7,6 +7,20 @@ namespace Collections
     {
         static void Main(string[] args)
         {
+            List<int> numerosEnteros= new List<int>();
+            int dato;
+            Console.WriteLine("¿Cuántos números quieres guardar?");
+            dato=Int32.Parse(Console.ReadLine());
+            for (int i = 0; i < dato; i++)
+            {
+                numerosEnteros.Add(Int32.Parse(Console.ReadLine()));
+            }
+            Console.WriteLine();
+            foreach (var item in numerosEnteros)
+            {
+                Console.WriteLine(item);
+            }
+
             List<string> list = new List<string>(3);
             list.Add("a");
             list.Add("a");
@@ -41,7 +55,7 @@ namespace Collections
 
 
             Console.WriteLine();
-            int[] numerosArrays = { 4,6,2,12,3};
+            int[] numerosArrays = { 4, 6, 2, 12, 3 };
             List<int> otrosNumeros = new List<int>(numerosArrays);
             otrosNumeros.Add(130);
             for (int i = 0; i < otrosNumeros.Count; i++)
