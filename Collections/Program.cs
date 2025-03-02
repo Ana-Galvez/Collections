@@ -7,6 +7,15 @@ namespace Collections
     {
         static void Main(string[] args)
         {
+            List<string> list = new List<string>(3);
+            list.Add("a");
+            list.Add("a");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+
             List<int> numeros = new List<int>();
             numeros.Add(1);
             numeros.Add(1);
@@ -31,7 +40,19 @@ namespace Collections
             }
 
 
-
+            Console.WriteLine();
+            int[] numerosArrays = { 4,6,2,12,3};
+            List<int> otrosNumeros = new List<int>(numerosArrays);
+            otrosNumeros.Add(130);
+            for (int i = 0; i < otrosNumeros.Count; i++)
+            {
+                Console.WriteLine(otrosNumeros[i]);
+            }
+            otrosNumeros.AddRange(numeros);
+            foreach (var item in otrosNumeros)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
