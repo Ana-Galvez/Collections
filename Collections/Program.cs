@@ -22,6 +22,14 @@ namespace Collections
                 Console.WriteLine(numero);
             }
 
+            numeros.Add(1000);
+
+            //Console.WriteLine(numeros.Capacity);
+            for (int i = 0; i < numeros.Count; i++)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+
 
 
         }
