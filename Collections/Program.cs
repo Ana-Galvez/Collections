@@ -7,6 +7,7 @@ namespace Collections
     {
         static void Main(string[] args)
         {
+            //listas
             List<int> numerosEnteros= new List<int>();
             int dato;
             Console.WriteLine("¿Cuántos números quieres guardar?");
@@ -67,6 +68,8 @@ namespace Collections
             {
                 Console.WriteLine(item);
             }
+            //Fin listas
+
         }
     }
 }
