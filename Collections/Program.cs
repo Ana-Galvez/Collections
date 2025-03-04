@@ -124,6 +124,23 @@ namespace Collections
             {
                 Console.WriteLine(nombreArray.GetType());
             }
+            //Fin queue
+            //Inicio Stack
+            Stack<int> numerosStack = new Stack<int>();
+            numerosStack.Push(0);
+            numerosStack.Push(0);
+            numerosStack.Push(0);
+            foreach (int item in new int[3] {6,12,8})
+            {
+                numerosStack.Push(item);
+            }
+            foreach (var item in numerosStack)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(numerosStack.Peek());
+            Console.WriteLine("El número borrado es: "+ numerosStack.Pop());
+            //Fin stack
 
         }
     }
