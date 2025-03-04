@@ -78,7 +78,12 @@ namespace Collections
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(  numbers.Contains(123));
+            Console.WriteLine(numbers.Contains(123));
+            for(LinkedListNode<int> nodo=numbers.First; nodo != null; nodo=nodo.Next)
+            {
+                Console.WriteLine(nodo.Value);
+            }
+            //Fin LinkedList
         }
     }
 }
