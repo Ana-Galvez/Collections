@@ -69,32 +69,61 @@ namespace Collections
             //    Console.WriteLine(item);
             //}
             ////Fin listas
-            //Inicio Linked List
-            int[] numbersArrays = { 6, 8, 56, 12, 47 };
-            LinkedList<int> numbers = new LinkedList<int>(numbersArrays);
-            numbers.AddLast(123);
-            numbers.AddFirst(456);
-            foreach (var item in numbers)
+            ////Inicio Linked List
+            //int[] numbersArrays = { 6, 8, 56, 12, 47 };
+            //LinkedList<int> numbers = new LinkedList<int>(numbersArrays);
+            //numbers.AddLast(123);
+            //numbers.AddFirst(456);
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine(numbers.Contains(123));
+            //LinkedListNode<int> nodo = numbers.First;
+            //for (nodo=numbers.First; nodo != null; nodo=nodo.Next)
+            //{
+            //    Console.WriteLine(nodo.Value);
+            //}
+            //LinkedListNode<string> fruta1 = new LinkedListNode<string>("manzana");
+            //Console.WriteLine(fruta1.Value);
+            //LinkedList<string> frutas = new LinkedList<string>();
+            //frutas.AddLast(fruta1);
+            //Console.WriteLine(fruta1.List.Count);
+            //frutas.AddFirst("naranja");
+            //Console.WriteLine(fruta1.Previous.Value);
+            //Console.WriteLine(fruta1.List.Count);
+            //frutas.AddAfter(fruta1, "pera");
+            //Console.WriteLine(fruta1.Next.Value);
+            ////Fin LinkedList
+            //Inicio Queue
+            Queue<string> nombres = new Queue<string>();
+            nombres.Enqueue("Ana");
+            nombres.Enqueue("tatin");
+            nombres.Enqueue("juan");
+
+            foreach (string item in new string[3] {"Matías","Carmen","Yanina"})
+            {
+                nombres.Enqueue(item);
+            }
+            foreach (string item in nombres)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(numbers.Contains(123));
-            LinkedListNode<int> nodo = numbers.First;
-            for (nodo=numbers.First; nodo != null; nodo=nodo.Next)
+            Console.WriteLine(nombres.Count);
+            Console.WriteLine(nombres.Dequeue());
+            foreach (string item in nombres)
             {
-                Console.WriteLine(nodo.Value);
+                Console.WriteLine(item);
             }
-            //Fin LinkedList
-            LinkedListNode<string> fruta1 = new LinkedListNode<string>("manzana");
-            Console.WriteLine(fruta1.Value);
-            LinkedList<string> frutas = new LinkedList<string>();
-            frutas.AddLast(fruta1);
-            Console.WriteLine(fruta1.List.Count);
-            frutas.AddFirst("naranja");
-            Console.WriteLine(fruta1.Previous.Value);
-            Console.WriteLine(fruta1.List.Count);
-            frutas.AddAfter(fruta1, "pera");
-            Console.WriteLine(fruta1.Next.Value);
+            Console.WriteLine("peek");
+            Console.WriteLine(nombres.Peek());
+            Console.WriteLine(nombres.Contains("juan"));
+            string[] nombreArray = nombres.ToArray();
+            Console.WriteLine("array");
+            foreach (var item in nombreArray)
+            {
+                Console.WriteLine(nombreArray.GetType());
+            }
 
         }
     }
