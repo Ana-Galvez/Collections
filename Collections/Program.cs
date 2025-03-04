@@ -141,7 +141,27 @@ namespace Collections
             Console.WriteLine(numerosStack.Peek());
             Console.WriteLine("El número borrado es: "+ numerosStack.Pop());
             //Fin stack
+            //Inicio dictionary
+            Dictionary<string,int> empleados = new Dictionary<string,int>();
+            empleados.Add("ana", 50000);
+            empleados.Add("tatin", 35000);
+            empleados.Add("juan", 40000);
 
+            foreach (KeyValuePair<string,int> datos in empleados)
+            {
+                Console.WriteLine("Nombre del empleado: " + datos.Key );
+            } 
+            foreach (KeyValuePair<string,int> datos in empleados)
+            {
+                Console.WriteLine("Sueldo de " + datos.Key + ": " + datos.Value );
+            }
+            Console.WriteLine(empleados.Remove("juan"));
+            foreach (KeyValuePair<string, int> datos in empleados)
+            {
+                Console.WriteLine("Sueldo de " + datos.Key + ": " + datos.Value);
+            }
+
+            //Fin dictionary
         }
     }
 }
