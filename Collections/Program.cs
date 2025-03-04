@@ -85,6 +85,16 @@ namespace Collections
                 Console.WriteLine(nodo.Value);
             }
             //Fin LinkedList
+            LinkedListNode<string> fruta1 = new LinkedListNode<string>("manzana");
+            Console.WriteLine(fruta1.Value);
+            LinkedList<string> frutas = new LinkedList<string>();
+            frutas.AddLast(fruta1);
+            Console.WriteLine(fruta1.List.Count);
+            frutas.AddFirst("naranja");
+            Console.WriteLine(fruta1.Previous.Value);
+            Console.WriteLine(fruta1.List.Count);
+            frutas.AddAfter(fruta1, "pera");
+            Console.WriteLine(fruta1.Next.Value);
 
         }
     }
