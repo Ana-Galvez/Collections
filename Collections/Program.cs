@@ -95,73 +95,109 @@ namespace Collections
             //frutas.AddAfter(fruta1, "pera");
             //Console.WriteLine(fruta1.Next.Value);
             ////Fin LinkedList
-            //Inicio Queue
-            Queue<string> nombres = new Queue<string>();
-            nombres.Enqueue("Ana");
-            nombres.Enqueue("tatin");
-            nombres.Enqueue("juan");
+            ////Inicio Queue
+            //Queue<string> nombres = new Queue<string>();
+            //nombres.Enqueue("Ana");
+            //nombres.Enqueue("tatin");
+            //nombres.Enqueue("juan");
 
-            foreach (string item in new string[3] {"Matías","Carmen","Yanina"})
+            //foreach (string item in new string[3] {"Matías","Carmen","Yanina"})
+            //{
+            //    nombres.Enqueue(item);
+            //}
+            //foreach (string item in nombres)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine(nombres.Count);
+            //Console.WriteLine(nombres.Dequeue());
+            //foreach (string item in nombres)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine("peek");
+            //Console.WriteLine(nombres.Peek());
+            //Console.WriteLine(nombres.Contains("juan"));
+            //string[] nombreArray = nombres.ToArray();
+            //Console.WriteLine("array");
+            //foreach (var item in nombreArray)
+            //{
+            //    Console.WriteLine(nombreArray.GetType());
+            //}
+            ////Fin queue
+            ////Inicio Stack
+            //Stack<int> numerosStack = new Stack<int>();
+            //numerosStack.Push(0);
+            //numerosStack.Push(0);
+            //numerosStack.Push(0);
+            //foreach (int item in new int[3] {6,12,8})
+            //{
+            //    numerosStack.Push(item);
+            //}
+            //foreach (var item in numerosStack)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine(numerosStack.Peek());
+            //Console.WriteLine("El número borrado es: "+ numerosStack.Pop());
+            ////Fin stack
+            ////Inicio dictionary
+            //Dictionary<string,int> empleados = new Dictionary<string,int>();
+            //empleados.Add("ana", 50000);
+            //empleados.Add("tatin", 35000);
+            //empleados.Add("juan", 40000);
+
+            //foreach (KeyValuePair<string,int> datos in empleados)
+            //{
+            //    Console.WriteLine("Nombre del empleado: " + datos.Key );
+            //} 
+            //foreach (KeyValuePair<string,int> datos in empleados)
+            //{
+            //    Console.WriteLine("Sueldo de " + datos.Key + ": " + datos.Value );
+            //}
+            //Console.WriteLine(empleados.Remove("juan"));
+            //foreach (KeyValuePair<string, int> datos in empleados)
+            //{
+            //    Console.WriteLine("Sueldo de " + datos.Key + ": " + datos.Value);
+            //}
+
+            ////Fin dictionary
+            //Inicio HashSet
+            HashSet<int> evenNumbers = new HashSet<int>();
+            HashSet<int> oddNumbers = new HashSet<int>();
+            HashSet<int> ints = new HashSet<int>() { 5,6,9,88,77};
+            for(int i = 0;i<10;i++)
             {
-                nombres.Enqueue(item);
+                evenNumbers.Add(i*2);
+                oddNumbers.Add(i*2+1);
             }
-            foreach (string item in nombres)
+            foreach (var item in oddNumbers)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(nombres.Count);
-            Console.WriteLine(nombres.Dequeue());
-            foreach (string item in nombres)
+            foreach (var item in evenNumbers)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("peek");
-            Console.WriteLine(nombres.Peek());
-            Console.WriteLine(nombres.Contains("juan"));
-            string[] nombreArray = nombres.ToArray();
-            Console.WriteLine("array");
-            foreach (var item in nombreArray)
-            {
-                Console.WriteLine(nombreArray.GetType());
-            }
-            //Fin queue
-            //Inicio Stack
-            Stack<int> numerosStack = new Stack<int>();
-            numerosStack.Push(0);
-            numerosStack.Push(0);
-            numerosStack.Push(0);
-            foreach (int item in new int[3] {6,12,8})
-            {
-                numerosStack.Push(item);
-            }
-            foreach (var item in numerosStack)
+            Console.WriteLine(evenNumbers.Count);
+            Console.WriteLine(oddNumbers.Count);
+            evenNumbers.Add(24);
+            evenNumbers.Add(104);
+            evenNumbers.Add(22);
+            Console.WriteLine();
+            foreach (var item in evenNumbers)
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine(numerosStack.Peek());
-            Console.WriteLine("El número borrado es: "+ numerosStack.Pop());
-            //Fin stack
-            //Inicio dictionary
-            Dictionary<string,int> empleados = new Dictionary<string,int>();
-            empleados.Add("ana", 50000);
-            empleados.Add("tatin", 35000);
-            empleados.Add("juan", 40000);
-
-            foreach (KeyValuePair<string,int> datos in empleados)
+            Console.WriteLine(evenNumbers.Contains(104));
+            evenNumbers.Remove(22);
+            evenNumbers.UnionWith(oddNumbers);
+            Console.WriteLine();
+            foreach (var item in evenNumbers)
             {
-                Console.WriteLine("Nombre del empleado: " + datos.Key );
-            } 
-            foreach (KeyValuePair<string,int> datos in empleados)
-            {
-                Console.WriteLine("Sueldo de " + datos.Key + ": " + datos.Value );
+                Console.WriteLine(item);
             }
-            Console.WriteLine(empleados.Remove("juan"));
-            foreach (KeyValuePair<string, int> datos in empleados)
-            {
-                Console.WriteLine("Sueldo de " + datos.Key + ": " + datos.Value);
-            }
-
-            //Fin dictionary
+            //Fin HashSet
         }
     }
 }
