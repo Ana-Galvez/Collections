@@ -162,42 +162,57 @@ namespace Collections
             //}
 
             ////Fin dictionary
-            //Inicio HashSet
-            HashSet<int> evenNumbers = new HashSet<int>();
-            HashSet<int> oddNumbers = new HashSet<int>();
-            HashSet<int> ints = new HashSet<int>() { 5,6,9,88,77};
-            for(int i = 0;i<10;i++)
-            {
-                evenNumbers.Add(i*2);
-                oddNumbers.Add(i*2+1);
-            }
-            foreach (var item in oddNumbers)
-            {
-                Console.WriteLine(item);
-            }
-            foreach (var item in evenNumbers)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine(evenNumbers.Count);
-            Console.WriteLine(oddNumbers.Count);
-            evenNumbers.Add(24);
-            evenNumbers.Add(104);
-            evenNumbers.Add(22);
-            Console.WriteLine();
-            foreach (var item in evenNumbers)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine(evenNumbers.Contains(104));
-            evenNumbers.Remove(22);
-            evenNumbers.UnionWith(oddNumbers);
-            Console.WriteLine();
-            foreach (var item in evenNumbers)
-            {
-                Console.WriteLine(item);
-            }
-            //Fin HashSet
+            ////Inicio HashSet
+            //HashSet<int> evenNumbers = new HashSet<int>();
+            //HashSet<int> oddNumbers = new HashSet<int>();
+            //HashSet<int> ints = new HashSet<int>() { 5,6,9,88,77};
+            //for(int i = 0;i<10;i++)
+            //{
+            //    evenNumbers.Add(i*2);
+            //    oddNumbers.Add(i*2+1);
+            //}
+            //foreach (var item in oddNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //foreach (var item in evenNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine(evenNumbers.Count);
+            //Console.WriteLine(oddNumbers.Count);
+            //evenNumbers.Add(24);
+            //evenNumbers.Add(104);
+            //evenNumbers.Add(22);
+            //Console.WriteLine();
+            //foreach (var item in evenNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine(evenNumbers.Contains(104));
+            //evenNumbers.Remove(22);
+            //evenNumbers.UnionWith(oddNumbers);
+            //Console.WriteLine();
+            //foreach (var item in evenNumbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            ////Fin HashSet
+            //Inicio SortedSet
+            int[] arraySorted = new int[] { 56, 8, 23, 54, 123, 56, 200 };
+            SortedSet<int> intsSorted = new SortedSet<int>() { 18,520,45,96};
+            SortedSet<int> list = new SortedSet<int>(arraySorted) ;
+            list.Add(100);
+            foreach (int item in list) Console.WriteLine(item);
+            Console.WriteLine(list.Min);
+            Console.WriteLine(list.Max);
+            Console.WriteLine(list.Count);
+            Console.WriteLine(list.Contains(8));
+            foreach (int item in intsSorted) Console.WriteLine(item);
+            Console.WriteLine(intsSorted.Remove(18));
+            foreach (int item in intsSorted) Console.WriteLine(item);
+
+            //Fin SortedSet
         }
     }
 }
