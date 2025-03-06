@@ -213,16 +213,26 @@ namespace Collections
             //foreach (int item in intsSorted) Console.WriteLine(item);
             ////Fin SortedSet
             //Inicio SortedDictionary
-            SortedDictionary<string,string> empleado=new SortedDictionary<string, string>();
-            empleado.Add("Ana", "Hernandez");
-            empleado.Add("Juan", "Gutierrez");
-            empleado.Add("Mateo", "Gutierrez");
-            empleado.Add("Gonzalo", "Gutierrez");
-            foreach (KeyValuePair<string,string> kvp in empleado) 
+            //SortedDictionary<string,string> empleado=new SortedDictionary<string, string>();
+            //empleado.Add("Ana", "Hernandez");
+            //empleado.Add("Juan", "Gutierrez");
+            //empleado.Add("Mateo", "Gutierrez");
+            //empleado.Add("Gonzalo", "Gutierrez");
+            //foreach (KeyValuePair<string,string> kvp in empleado) 
+            //{
+            //    Console.WriteLine("Nombre: {0}, Apellido: {1}",kvp.Key,kvp.Value);
+            //}
+            ////Fin SortedDictionary
+            //Inicio SortedList: igual sorteddictionary pero un poco más rápido
+            SortedList<string,string> empleaditos = new SortedList<string,string>();
+            empleaditos.Add("Ana", "Hermandez");
+            empleaditos.Add("Manolo", "Hermandez");
+            empleaditos.Add("Heraclio", "Hermandez");
+            foreach (KeyValuePair<string,string> kvp in empleaditos) 
             {
-                Console.WriteLine("Nombre: {0}, Apellido: {1}",kvp.Key,kvp.Value);
+                Console.WriteLine($"Nombre: {kvp.Key}/Apellido: {kvp.Value}");
             }
-            //Fin SortedDictionary
+            //Fin SortedList
         }
     }
 }
