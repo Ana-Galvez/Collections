@@ -198,21 +198,31 @@ namespace Collections
             //    Console.WriteLine(item);
             //}
             ////Fin HashSet
-            //Inicio SortedSet
-            int[] arraySorted = new int[] { 56, 8, 23, 54, 123, 56, 200 };
-            SortedSet<int> intsSorted = new SortedSet<int>() { 18,520,45,96};
-            SortedSet<int> list = new SortedSet<int>(arraySorted) ;
-            list.Add(100);
-            foreach (int item in list) Console.WriteLine(item);
-            Console.WriteLine(list.Min);
-            Console.WriteLine(list.Max);
-            Console.WriteLine(list.Count);
-            Console.WriteLine(list.Contains(8));
-            foreach (int item in intsSorted) Console.WriteLine(item);
-            Console.WriteLine(intsSorted.Remove(18));
-            foreach (int item in intsSorted) Console.WriteLine(item);
-
-            //Fin SortedSet
+            ////Inicio SortedSet: no acepta duplicado y ordena
+            //int[] arraySorted = new int[] { 56, 8, 23, 54, 123, 56, 200 };
+            //SortedSet<int> intsSorted = new SortedSet<int>() { 18,520,45,96};
+            //SortedSet<int> list = new SortedSet<int>(arraySorted) ;
+            //list.Add(100);
+            //foreach (int item in list) Console.WriteLine(item);
+            //Console.WriteLine(list.Min);
+            //Console.WriteLine(list.Max);
+            //Console.WriteLine(list.Count);
+            //Console.WriteLine(list.Contains(8));
+            //foreach (int item in intsSorted) Console.WriteLine(item);
+            //Console.WriteLine(intsSorted.Remove(18));
+            //foreach (int item in intsSorted) Console.WriteLine(item);
+            ////Fin SortedSet
+            //Inicio SortedDictionary
+            SortedDictionary<string,string> empleado=new SortedDictionary<string, string>();
+            empleado.Add("Ana", "Hernandez");
+            empleado.Add("Juan", "Gutierrez");
+            empleado.Add("Mateo", "Gutierrez");
+            empleado.Add("Gonzalo", "Gutierrez");
+            foreach (KeyValuePair<string,string> kvp in empleado) 
+            {
+                Console.WriteLine("Nombre: {0}, Apellido: {1}",kvp.Key,kvp.Value);
+            }
+            //Fin SortedDictionary
         }
     }
 }
